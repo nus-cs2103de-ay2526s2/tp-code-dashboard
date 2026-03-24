@@ -1,0 +1,7 @@
+reposense-report/
+RepoSense/
+reposense/
+.DS_Store
+.idea/
+reposense-logs/
+repos/
