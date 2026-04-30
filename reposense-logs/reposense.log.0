@@ -1,0 +1,209 @@
+Apr 30, 2026 1:47:13 AM reposense.system.LogsManager addFileHandler
+INFO: Log temp folder has been successfully created
+Apr 30, 2026 1:47:13 AM reposense.parser.ReportConfigYamlParser parse
+INFO: Parsing report-config.yaml file...
+Apr 30, 2026 1:47:14 AM reposense.parser.ArgsParser addReportConfigToBuilder
+WARNING: Error parsing report-config.yaml: ./configs/report-config.yaml (No such file or directory)
+./configs/report-config.yaml Ignoring the report config provided.
+Apr 30, 2026 1:47:14 AM reposense.parser.CsvParser validateHeader
+INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
+Apr 30, 2026 1:47:14 AM reposense.git.GitConfig getGlobalGitLfsConfig
+WARNING: Could not get global git lfs config
+java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
+fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
+
+	at reposense.system.CommandRunner.runCommand(CommandRunner.java:23)
+	at reposense.git.GitConfig.getGitGlobalConfig(GitConfig.java:90)
+	at reposense.git.GitConfig.getGlobalGitLfsConfig(GitConfig.java:44)
+	at reposense.RepoSense.main(RepoSense.java:87)
+Caused by: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
+fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
+	... 3 more
+
+Apr 30, 2026 1:47:15 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/tPJustinCheran/minesweeper...
+Apr 30, 2026 1:47:15 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Muzhou-exe/ProcessGuard...
+Apr 30, 2026 1:47:15 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/NUS-CS2103DE-Team9/tp...
+Apr 30, 2026 1:47:15 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/CS2103DE-Group-2/restaurant-review...
+Apr 30, 2026 1:47:15 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/NUS-CS2103DE-Team9/tp to complete...
+Apr 30, 2026 1:47:15 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Muzhou-exe/ProcessGuard to complete...
+Apr 30, 2026 1:47:15 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/tPJustinCheran/minesweeper to complete...
+Apr 30, 2026 1:47:15 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/CS2103DE-Group-2/restaurant-review to complete...
+Apr 30, 2026 1:47:16 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Muzhou-exe/ProcessGuard completed!
+Apr 30, 2026 1:47:16 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/nus-cs2103de-ay2526s2-grp6/tp...
+Apr 30, 2026 1:47:16 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [1/9] Analyzing https://github.com/Muzhou-exe/ProcessGuard (main)...
+Apr 30, 2026 1:47:16 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/nus-cs2103de-ay2526s2-grp6/tp to complete...
+Apr 30, 2026 1:47:16 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Muzhou-exe/ProcessGuard (main) does not contain a standalone config file.
+Apr 30, 2026 1:47:16 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Muzhou-exe/ProcessGuard (main) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:16 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Muzhou-exe/ProcessGuard (main)...
+Apr 30, 2026 1:47:16 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/NUS-CS2103DE-Team9/tp completed!
+Apr 30, 2026 1:47:16 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/jimmy-neu/CS2103DE-TP-Group-4...
+Apr 30, 2026 1:47:16 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [2/9] Analyzing https://github.com/NUS-CS2103DE-Team9/tp (master)...
+Apr 30, 2026 1:47:16 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/jimmy-neu/CS2103DE-TP-Group-4 to complete...
+Apr 30, 2026 1:47:16 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/NUS-CS2103DE-Team9/tp (master) does not contain a standalone config file.
+Apr 30, 2026 1:47:16 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/NUS-CS2103DE-Team9/tp (master) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:16 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/NUS-CS2103DE-Team9/tp (master)...
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/nus-cs2103de-ay2526s2-grp6/tp completed!
+Apr 30, 2026 1:47:17 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [3/9] Analyzing https://github.com/nus-cs2103de-ay2526s2-grp6/tp (master)...
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/JobApplications-Tracker/JobApps-Tracker...
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/JobApplications-Tracker/JobApps-Tracker to complete...
+Apr 30, 2026 1:47:17 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/nus-cs2103de-ay2526s2-grp6/tp (master) does not contain a standalone config file.
+Apr 30, 2026 1:47:17 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/nus-cs2103de-ay2526s2-grp6/tp (master) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:17 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/nus-cs2103de-ay2526s2-grp6/tp (master)...
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/tPJustinCheran/minesweeper completed!
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/MediTrack-Group8/tp...
+Apr 30, 2026 1:47:17 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [4/9] Analyzing https://github.com/tPJustinCheran/minesweeper (main)...
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/MediTrack-Group8/tp to complete...
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/CS2103DE-Group-2/restaurant-review completed!
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/cs2103de-tp/MapsAroundYou...
+Apr 30, 2026 1:47:17 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/cs2103de-tp/MapsAroundYou to complete...
+Apr 30, 2026 1:47:17 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/tPJustinCheran/minesweeper (main) does not contain a standalone config file.
+Apr 30, 2026 1:47:17 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/tPJustinCheran/minesweeper (main) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:18 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/tPJustinCheran/minesweeper (main)...
+Apr 30, 2026 1:47:18 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Muzhou-exe/ProcessGuard (main)...
+Apr 30, 2026 1:47:18 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Muzhou-exe/ProcessGuard (main)...
+Apr 30, 2026 1:47:18 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/MediTrack-Group8/tp completed!
+Apr 30, 2026 1:47:18 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/NUS-CS2103DE-Team9/tp (master)...
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Muzhou-exe/ProcessGuard (main) completed!
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [5/9] Analyzing https://github.com/CS2103DE-Group-2/restaurant-review (main)...
+Apr 30, 2026 1:47:19 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/NUS-CS2103DE-Team9/tp (master)...
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/NUS-CS2103DE-Team9/tp (master) completed!
+Apr 30, 2026 1:47:19 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/cs2103de-tp/MapsAroundYou completed!
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [6/9] Analyzing https://github.com/MediTrack-Group8/tp (main)...
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/MediTrack-Group8/tp (main) does not contain a standalone config file.
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/MediTrack-Group8/tp (main) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:19 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/MediTrack-Group8/tp (main)...
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/CS2103DE-Group-2/restaurant-review (main) does not contain a standalone config file.
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/CS2103DE-Group-2/restaurant-review (main) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:19 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/tPJustinCheran/minesweeper (main)...
+Apr 30, 2026 1:47:19 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/CS2103DE-Group-2/restaurant-review (main)...
+Apr 30, 2026 1:47:19 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/jimmy-neu/CS2103DE-TP-Group-4 completed!
+Apr 30, 2026 1:47:19 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/JobApplications-Tracker/JobApps-Tracker completed!
+Apr 30, 2026 1:47:19 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/tPJustinCheran/minesweeper (main)...
+Apr 30, 2026 1:47:19 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/nus-cs2103de-ay2526s2-grp6/tp (master)...
+Apr 30, 2026 1:47:19 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/tPJustinCheran/minesweeper (main) completed!
+Apr 30, 2026 1:47:20 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [7/9] Analyzing https://github.com/cs2103de-tp/MapsAroundYou (main)...
+Apr 30, 2026 1:47:20 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/cs2103de-tp/MapsAroundYou (main) does not contain a standalone config file.
+Apr 30, 2026 1:47:20 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/cs2103de-tp/MapsAroundYou (main) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:20 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/cs2103de-tp/MapsAroundYou (main)...
+Apr 30, 2026 1:47:20 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/nus-cs2103de-ay2526s2-grp6/tp (master)...
+Apr 30, 2026 1:47:20 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/nus-cs2103de-ay2526s2-grp6/tp (master) completed!
+Apr 30, 2026 1:47:20 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [8/9] Analyzing https://github.com/jimmy-neu/CS2103DE-TP-Group-4 (main)...
+Apr 30, 2026 1:47:20 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/jimmy-neu/CS2103DE-TP-Group-4 (main) does not contain a standalone config file.
+Apr 30, 2026 1:47:20 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/jimmy-neu/CS2103DE-TP-Group-4 (main) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:20 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/jimmy-neu/CS2103DE-TP-Group-4 (main)...
+Apr 30, 2026 1:47:21 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/jimmy-neu/CS2103DE-TP-Group-4 (main)...
+Apr 30, 2026 1:47:21 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/jimmy-neu/CS2103DE-TP-Group-4 (main)...
+Apr 30, 2026 1:47:21 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/MediTrack-Group8/tp (main)...
+Apr 30, 2026 1:47:21 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/jimmy-neu/CS2103DE-TP-Group-4 (main) completed!
+Apr 30, 2026 1:47:21 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [9/9] Analyzing https://github.com/JobApplications-Tracker/JobApps-Tracker (main)...
+Apr 30, 2026 1:47:21 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/MediTrack-Group8/tp (main)...
+Apr 30, 2026 1:47:21 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/MediTrack-Group8/tp (main) completed!
+Apr 30, 2026 1:47:21 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/JobApplications-Tracker/JobApps-Tracker (main) does not contain a standalone config file.
+Apr 30, 2026 1:47:21 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/JobApplications-Tracker/JobApps-Tracker (main) has no authors specified, using all authors by default.
+Apr 30, 2026 1:47:21 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/JobApplications-Tracker/JobApps-Tracker (main)...
+Apr 30, 2026 1:47:21 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/CS2103DE-Group-2/restaurant-review (main)...
+Apr 30, 2026 1:47:21 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/cs2103de-tp/MapsAroundYou (main)...
+Apr 30, 2026 1:47:21 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/CS2103DE-Group-2/restaurant-review (main)...
+Apr 30, 2026 1:47:21 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/CS2103DE-Group-2/restaurant-review (main) completed!
+Apr 30, 2026 1:47:22 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/cs2103de-tp/MapsAroundYou (main)...
+Apr 30, 2026 1:47:22 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/cs2103de-tp/MapsAroundYou (main) completed!
+Apr 30, 2026 1:47:22 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/JobApplications-Tracker/JobApps-Tracker (main)...
+Apr 30, 2026 1:47:22 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/JobApplications-Tracker/JobApps-Tracker (main)...
+Apr 30, 2026 1:47:22 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/JobApplications-Tracker/JobApps-Tracker (main) completed!
+Apr 30, 2026 1:47:22 AM reposense.report.ReportGenerator generateReposReport
+INFO: The report is generated at /home/runner/work/tp-code-dashboard/tp-code-dashboard/reposense-report/reposense-report
+Apr 30, 2026 1:47:22 AM reposense.RepoSense main
+INFO: Elapsed processing time: 9.65 second(s)
